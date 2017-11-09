@@ -28,3 +28,27 @@ a {
 .blog-post-title a:hover{
 	color: #b34848;
 	}
+
+.nekiKomentar ul {
+	list-style-type: none;
+
+	}
+
+.nekiKomentar ul li:first-child{
+	color: #b34848;
+	 }
+
+.hide-show {
+	padding: 20px 20px 20px 0;
+	}
+.hide-show > .btn {
+	border-radius: 2rem;
+	}
+
+.hidden {
+	display: none;
+	}
+.komentar-forma {
+	height: 300px;
+	width: 220px;
+	}

@@ -73,7 +73,7 @@
           ?>
               <div class="blog-post">
                    <h2 class="blog-post-title"><a href="single-post.php?post_id=<?php echo($post['id']) ?>"><?php echo($post['Title']) ?></a></h2>
-                   <p class="blog-post-meta"><?php echo $post['Created_at'] . ' by ' ?> <a href="#"><?php $post['Author'] ?></a></p>
+                   <p class="blog-post-meta"><?php echo $post['Created_at'] . ' by ' ?> <a href="#"><?php echo $post['Author'] ?></a></p>
 
                    <p><?php echo $post['Body'] ?></p>
                </div>
