@@ -52,3 +52,42 @@ a {
 	height: 300px;
 	width: 220px;
 	}
+.komentar-forma  {
+	border-radius: 2rem;
+	}
+.dugme {
+	border-radius: 2rem;
+	background-color: white;
+	border-style: dotted;
+	border-color: lightgrey;
+	color: grey;
+	}
+.dugme:hover {
+	background-color: lightgrey;
+
+	}
+
+.submitcommentdugme {
+    border-radius: 2rem;
+	background-color: white;
+	border-style: dotted;
+	border-color: lightgrey;
+	color: grey;
+	}
+.submitcommentdugme:hover {
+	background-color: lightgrey;
+	}
+
+.novipost {
+	background-color: yellow;
+	width: 300px;
+	}
+
+.novi-post{
+	padding: 20px;
+	border-style: solid;
+	border-radius: 5rem;
+	border-color: lightgrey;
+	}
+.novi-post1{
+	padding: 20px;}

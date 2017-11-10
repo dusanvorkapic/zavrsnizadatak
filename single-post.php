@@ -1,6 +1,5 @@
 <?php
-    // ako su mysql username/password i ime baze na vasim racunarima drugaciji
-    // obavezno ih ovde zamenite
+
     $servername = "127.0.0.1";
     $username = "root";
     $password = "vivify";
@@ -83,7 +82,7 @@
 
            <div class="komentar-forma">
 
-                <h3>Leave a Comment</h3>
+                <h3>Leave a Comment:</h3>
 
                   <form action="post_comment.php" method="post" id="commentform">
 
@@ -94,8 +93,8 @@
                     <textarea name="comment" id="comment" rows="5" tabindex="4"  required="required"></textarea>
 
                 
-                    <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
-                    <input name="submit" type="submit" value="Submit comment" />
+                    <input type="hidden" name="comment_post_ID" value = "<?php echo ($_GET['post_id']) ?>" id="comment_post_ID" />
+                    <input class="submitcommentdugme" name="submit" type="submit" value="Submit comment" />
 
                   </form>
 
@@ -116,7 +115,7 @@
 
                 <div class="comment">
                 <?php
-                        $sqlCom = "SELECT * FROM comments WHERE comments.Post_id={$_GET['post_id']}";
+                        $sqlCom = "SELECT * FROM comments WHERE Post_id={$_GET['post_id']}";
                         $statementC = $connection->prepare($sqlCom);
                         $statementC->execute();
                         $statementC->setFetchMode(PDO::FETCH_ASSOC);
@@ -131,7 +130,15 @@
                     <li><?php echo $singleCom['Author']; ?> </li>
                     <li><?php echo $singleCom['Text']; ?></li>
                </ul>
+               
+                <form class="deleteComm" method="post" action='delete_comment.php'>
+                           <input class="dugme" type="submit" name="delete" value="Delete comment">
+                           <input type="hidden" name="id" value="<?php echo $singleCom['id'] ?>">
+                           <input type="hidden" name="post_id" value="<?php echo $_GET['post_id'] ?>">
+                </form> 
                <hr>
+
+
                </div>
            <?php
            }
